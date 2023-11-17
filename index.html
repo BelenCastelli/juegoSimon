@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Juego Simon</title>
+</head>
+<body>
+    <header>
+        <h1><b>Juego Simon</b></h1>
+    </header>
+
+    <main>
+        
+        <section class="game">
+            <div class="game-content">
+                <button class="color" id="blue" onclick="clickUsuario(blue)"></button>
+                <button class="color" id="red" onclick="clickUsuario(red)"></button>
+                <button class="color" id="green" onclick="clickUsuario(green)"></button>
+                <button class="color" id="yellow" onclick="clickUsuario(yellow)"></button>
+            </div>
+
+        </section>
+
+        <section class="buttons">
+            <button class="button" onclick="iluminarSecuenciaAleatoria()" id="play">Jugar</button>
+            <button class="button" onclick="comprobarRespuesta(secuencia,respuesta)" id="send">Enviar respuesta</button>
+            <button class="button" onclick="continuar()" id="continue">Continuar</button>
+            <button class="button" onclick="reset()" id="reset">Reset</button>
+        </section>
+    
+    </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
