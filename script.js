@@ -43,27 +43,20 @@ function clickUsuario(color) {
 
 function comprobarRespuesta(secuencia, respuesta) {
     
-    if(secuencia.length != respuesta.length){
+    let i = 0;
+    while(i<secuencia.length && secuencia[i] == respuesta[i]){
+      i++
+    }
+    esCorrecta = i == secuencia.length;
+            
+    if (esCorrecta == true){
+        alert("¡Respuesta Correcta, sigue así. Pulsa Continuar")
+    } else if (esCorrecta == false) {
         alert("Respuesta Incorrecta. Pulsa Jugar y prueba otra vez")
         reset()
-
-    }else if (secuencia.length == respuesta.length){
-            for(let i = 0; i < secuencia.length; i++ ){
-                if(secuencia[i] === respuesta[i]) {
-                    esCorrecta = true
-                } else if (secuencia[i] !== respuesta[i]){
-                    esCorrecta = false
-                }
-            }
-            
-        if (esCorrecta == true){
-            alert("¡Respuesta Correcta, sigue así. Pulsa Continuar")
-        } else if (esCorrecta == false) {
-            alert("Respuesta Incorrecta. Pulsa Jugar y prueba otra vez")
-            reset()
-        }
-        return esCorrecta   
     }
+    return esCorrecta   
+    
 }
 
 function continuar(){
@@ -76,6 +69,6 @@ function continuar(){
 }
 
 function reset(){
-    location.reload()
+    secuencia = []
 }
 
